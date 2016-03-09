@@ -143,3 +143,11 @@ BOARD_HAL_STATIC_LIBRARIES := libdumpstate.shamu
 EXTENDED_FONT_FOOTPRINT := true
 
 -include vendor/moto/shamu/BoardConfigVendor.mk
+
+# Sabermod optimizations
+export CLANG_O3 := true
+export CORTEX_TUNINGS := false
+export ENABLE_GCCONLY := true
+export GRAPHITE_OPTS := true
+export KRAIT_TUNINGS := true
+export STRICT_ALIASING := true
