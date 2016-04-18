@@ -25,7 +25,7 @@ ENABLE_CPUSETS := true
 TARGET_NO_BOOTLOADER := true
 
 # Custom kernel toolchain
-TARGET_GCC_VERSION_ARM := 6.0
+TARGET_GCC_VERSION_ARM := 7.0
 
 # Inline kernel building
 TARGET_KERNEL_CONFIG := B14CKB1RD_defconfig
