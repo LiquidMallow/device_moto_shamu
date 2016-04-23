@@ -24,14 +24,6 @@ ENABLE_CPUSETS := true
 
 TARGET_NO_BOOTLOADER := true
 
-# Custom kernel toolchain
-TARGET_GCC_VERSION_ARM := 7.0
-
-# Inline kernel building
-TARGET_KERNEL_CONFIG := B14CKB1RD_defconfig
-TARGET_KERNEL_SOURCE := kernel/moto/shamu
-BOARD_KERNEL_IMAGE_NAME := zImage-dtb
-
 BOARD_KERNEL_BASE := 0x00000000
 BOARD_KERNEL_PAGESIZE :=  2048
 BOARD_KERNEL_TAGS_OFFSET := 0x01E00000
@@ -143,13 +135,3 @@ BOARD_HAL_STATIC_LIBRARIES := libdumpstate.shamu
 EXTENDED_FONT_FOOTPRINT := true
 
 -include vendor/moto/shamu/BoardConfigVendor.mk
-
-# Sabermod optimizations
-export CLANG_O3 := true
-export CORTEX_TUNINGS := false
-export ENABLE_GCCONLY := true
-export ENABLE_SANITIZE := true
-export GRAPHITE_OPTS := true
-export KRAIT_TUNINGS := true
-export STRICT_ALIASING := true
-export USE_PIPE := true
